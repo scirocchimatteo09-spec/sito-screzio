@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>SITO DELLO SCREZIO</title>
+
+    <style>
+
+        body {
+
+            text-align: center;
+
+            font-family: monospace;
+
+            background-color: black;
+
+            color: lime;
+
+            overflow: hidden;
+
+        }
+
+
+
+        h1 {
+
+            color: red;
+
+            font-size: 50px;
+
+        }
+
+
+
+        img {
+
+            width: 300px;
+
+            border-radius: 50%;
+
+            transition: 0.2s;
+
+        }
+
+
+
+        #face {
+
+            position: absolute;
+
+            top: 50%;
+
+            left: 50%;
+
+            transform: translate(-50%, -50%) scale(0);
+
+            z-index: 999;
+
+        }
+
+
+
+        button {
+
+            margin-top: 20px;
+
+            padding: 12px;
+
+            font-size: 18px;
+
+            cursor: pointer;
+
+        }
+
+
+
+        #fakeTerminal {
+
+            margin-top: 20px;
+
+            font-size: 18px;
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+
+<h1>💀 SITO DELLO SCREZIO 💀</h1>
+
+<h2>⚠️ SOGGETTO PERICOLOSO ⚠️</h2>
+
+
+
+<img src="mattia.jpg">
+
+
+
+<p>👤 Mattia Proietti</p>
+
+<p>🔒 ACCESSO AI DATI RISERVATI</p>
+
+
+
+<div id="fakeTerminal"></div>
+
+
+
+<button onclick="startHack()">AVVIA SCANSIONE</button>
+
+
+
+<img id="face" src="mattia.jpg">
+
+
+
+<script>
+
+
+
+function startHack() {
+
+    let text = [
+
+        "Connessione al database...",
+
+        "Accesso ai dati...",
+
+        "Analisi soggetto...",
+
+        "Pericolosità: 100%",
+
+        "ATTENZIONE..."
+
+    ];
+
+
+
+    let i = 0;
+
+    let terminal = document.getElementById("fakeTerminal");
+
+
+
+    let interval = setInterval(() => {
+
+        terminal.innerHTML += "<br>" + text[i];
+
+        i++;
+
+
+
+        if (i >= text.length) {
+
+            clearInterval(interval);
+
+            jumpscare();
+
+        }
+
+    }, 800);
+
+}
+
+
+
+function jumpscare() {
+
+    let face = document.getElementById("face");
+
+
+
+    face.style.transform = "translate(-50%, -50%) scale(5)";
+
+    document.body.style.backgroundColor = "red";
+
+
+
+    setInterval(() => {
+
+        document.body.style.backgroundColor =
+
+            document.body.style.backgroundColor === "red" ? "black" : "red";
+
+    }, 100);
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html
